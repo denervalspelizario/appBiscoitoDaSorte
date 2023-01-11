@@ -12,10 +12,10 @@ export default function App() {
       
       />
 
-      <Text>"Alguma Frase Aqui !!!"</Text>
-      <TouchableOpacity>{/* 2 Chamando o botão */}
-        <View>
-          <Text>
+      <Text style={styles.textoFrase}>"Alguma Frase Aqui !!!"</Text>
+      <TouchableOpacity style={styles.botao}>{/* 2 Chamando o botão */}
+        <View style={styles.btnArea}>
+          <Text style={styles.btnTexto}>
             Quebrar o Biscoito
           </Text>      
         </View>            
@@ -34,5 +34,29 @@ const styles = StyleSheet.create({
   img : {
     width: 250,
     height: 250,
+  },
+  textoFrase: {
+    fontSize: 20,
+    color: '#dd7b22',
+    margin: 30,
+    fontStyle: 'italic',
+  },
+  botao: {
+    width: 230,
+    height: 50,
+    borderWidth: 2,
+    borderColor: '#dd7b22',
+    borderRadius: 25
+  },
+  btnArea: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  btnTexto: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#dd7b22'
   }
 });
