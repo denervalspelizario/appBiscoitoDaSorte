@@ -92,10 +92,13 @@ class App extends Component {
     } else {
     
       let numeroAleatorio = Math.floor(Math.random() * this.frases.length)  // 5  funcao para gerar um numero aleatorio e usar para escolher uma frase aleatoria 
+                                                                            // math.floor() retorna numero inteiro ou seja ele pega um numero fracionado e retorna inteiro
+                                                                            // math.random() retorna um numero aleatorio de 0 a 1 depois multiplica pela quantidade de frases
+                                                                            // com isso retorna um numero aleatorio inteiro baseado na quantidade de frases
 
     this.setState({
-      textoFrase:  ' "' + this.frases[numeroAleatorio] + ' "' ,//  5 ao acionar o onPress o state vira setState e 1 - troca o textoFrase de vazio para frase alatoria atavez da funcao numeroAleatorio
-      img: ImageOpen,
+      textoFrase:  ' "' + this.frases[numeroAleatorio] + ' "' ,//  5 ao acionar o onPress o state vira setState e 
+      img: ImageOpen,                                          // 1 - troca o textoFrase de vazio para frase alatoria atavez da funcao numeroAleatorio
       textoBtn: 'Tentar Novamente',
     });
 
